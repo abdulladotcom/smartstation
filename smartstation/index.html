@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Station FRZ - Electrical & Telecommunications Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230A2463'/%3E%3Cstop offset='1' stop-color='%23001845'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='0.5'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: #3B82F6;
+        }
+        
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            border-color: #3B82F6;
+            ring: 2px;
+            ring-color: #3B82F6;
+        }
+        
+        .scroll-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl font-bold">
+                        <span class="text-blue-800">Smart</span> Station<span class="text-sm text-gray-600 ml-1">FRZ</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <img src="C:\Users\User\Desktop\smartstation\smart.jpeg" width="400" height="400">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    Powering Your <span class="text-blue-400">Connections</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+                    Expert installation of electrical wiring, fiber optics, telecommunications, 
+                    computer networks, satellite systems, and lighting solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl">
+                        Our Services
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-medium py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We provide comprehensive installation and maintenance services for all your electrical and telecommunications needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Electrical Wiring</h3>
+                    <p class="text-gray-600">
+                        Complete electrical wiring solutions for residential, commercial, and industrial properties with safety and efficiency in mind.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fiber Optic Installation</h3>
+                    <p class="text-gray-600">
+                        High-speed fiber optic cabling and network setup for ultra-fast data transmission and reliable connectivity.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Telecommunication Wiring</h3>
+                    <p class="text-gray-600">
+                        Structured cabling systems for voice and data communications, ensuring clear and reliable telecommunications.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Computer Network Setup</h3>
+                    <p class="text-gray-600">
+                        Complete network infrastructure design and implementation, including LAN/WAN setup, routers, and switches.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Satellite Dish Installation</h3>
+                    <p class="text-gray-600">
+                        Professional satellite dish mounting and setup for optimal signal reception and entertainment solutions.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="service-icon text-5xl text-blue-500 mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Lighting Systems</h3>
+                    <p class="text-gray-600">
+                        Energy-efficient lighting solutions including LED installations, smart lighting controls, and decorative lighting design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-blue-600 p-1 rounded-lg">
+                        <svg class="w-full h-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#1E40AF"/>
+                            <circle cx="200" cy="150" r="80" fill="#60A5FA"/>
+                            <path d="M160 110 L240 110 L240 190 L160 190 Z" fill="#1E40AF"/>
+                            <path d="M170 120 L230 120 L230 180 L170 180 Z" fill="#FFFFFF"/>
+                            <path d="M180 130 L220 130 L220 170 L180 170 Z" fill="#60A5FA"/>
+                            <path d="M120 80 L140 80 L140 220 L120 220 Z" fill="#FFFFFF"/>
+                            <path d="M260 80 L280 80 L280 220 L260 220 Z" fill="#FFFFFF"/>
+                            <path d="M100 70 L300 70 L300 80 L100 80 Z" fill="#FFFFFF"/>
+                            <path d="M100 220 L300 220 L300 230 L100 230 Z" fill="#FFFFFF"/>
+                            <path d="M200 70 L200 40 L210 30 L220 40 L220 70 Z" fill="#FFFFFF"/>
+                            <circle cx="150" cy="150" r="5" fill="#FFFFFF"/>
+                            <circle cx="250" cy="150" r="5" fill="#FFFFFF"/>
+                            <path d="M140 100 L140 90 L150 90 L150 100 Z" fill="#60A5FA"/>
+                            <path d="M140 120 L140 110 L150 110 L150 120 Z" fill="#60A5FA"/>
+                            <path d="M140 140 L140 130 L150 130 L150 140 Z" fill="#60A5FA"/>
+                            <path d="M140 160 L140 150 L150 150 L150 160 Z" fill="#60A5FA"/>
+                            <path d="M140 180 L140 170 L150 170 L150 180 Z" fill="#60A5FA"/>
+                            <path d="M140 200 L140 190 L150 190 L150 200 Z" fill="#60A5FA"/>
+                            <path d="M250 100 L250 90 L260 90 L260 100 Z" fill="#60A5FA"/>
+                            <path d="M250 120 L250 110 L260 110 L260 120 Z" fill="#60A5FA"/>
+                            <path d="M250 140 L250 130 L260 130 L260 140 Z" fill="#60A5FA"/>
+                            <path d="M250 160 L250 150 L260 150 L260 160 Z" fill="#60A5FA"/>
+                            <path d="M250 180 L250 170 L260 170 L260 180 Z" fill="#60A5FA"/>
+                            <path d="M250 200 L250 190 L260 190 L260 200 Z" fill="#60A5FA"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Smart Station FRZ</h2>
+                    <p class="text-gray-600 mb-4">
+                        Smart Station FRZ is a leading provider of electrical and telecommunications installation services. With years of industry experience, we deliver high-quality solutions tailored to meet the unique needs of our clients.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Our team of certified technicians is committed to excellence, using the latest technology and industry best practices to ensure reliable, efficient, and future-proof installations for residential, commercial, and industrial projects.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Quality Materials</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Timely Completion</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Competitive Pricing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">24/7 Support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Warranty Backed</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Recent Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Take a look at some of our recent installations and solutions we've provided to our valued clients.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                            <path d="M12 12.59l-2.3-2.3-1.4 1.42L12 15.41l4.7-4.7-1.4-1.42z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Corporate Office Network</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete network infrastructure setup for a 10-story corporate building, including fiber optic backbone and wireless access points.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Dubai Business Bay</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Smart Home Integration</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive smart home wiring and system installation including lighting control, security, and entertainment systems.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Palm Jumeirah Villa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                            <circle cx="12" cy="12" r="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Hotel Satellite System</h3>
+                        <p class="text-gray-600 mb-4">
+                            Installation of satellite reception system and distribution network for a 200-room luxury hotel and conference center.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Abu Dhabi Corniche</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-more-btn" class="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium py-3 px-8 rounded-full transition duration-300">
+                    View More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it. Here's what our clients have to say about our services.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Smart Station FRZ transformed our office connectivity. Their fiber optic installation was quick, professional, and has significantly improved our network speed."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            AM
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Ahmed Mahmoud</h4>
+                            <p class="text-sm text-gray-500">IT Director, Global Enterprises</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "The lighting system installed by Smart Station FRZ has completely transformed our retail space. Energy-efficient and beautifully designed. Highly recommended!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            SJ
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">Store Manager, Luxury Boutique</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "We needed a complex telecommunications setup for our new headquarters. Smart Station FRZ delivered on time and within budget. Their after-service support is excellent."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            RK
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Raj Kumar</h4>
+                            <p class="text-sm text-gray-500">Operations Manager, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-blue-200 max-w-2xl mx-auto">
+                    Have a project in mind? Contact us today for a free consultation and quote.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-300 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Our Location</h4>
+                                <p class="text-blue-200">Smart Station FRZ , Business Centre, Sharjah Publishing City Free Zone,Sharjah, UAE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-300 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Call Us</h4>
+                                <p class="text-blue-200">+971505357740</p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-300 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Email Us</h4>
+                                <p class="text-blue-200">info@smartstationfrz.com</p>
+                                <p class="text-blue-200">support@smartstationfrz.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-300 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Working Hours</h4>
+                                <p class="text-blue-200">Saturday - Thursday: 8:00 AM - 6:00 PM</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium text-lg mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="contact-form space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-blue-200 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-blue-800 border border-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-blue-200 mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-blue-800 border border-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-blue-200 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-blue-800 border border-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-blue-200 mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 bg-blue-800 border border-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                                <option value="">Select a Service</option>
+                                <option value="electrical">Electrical Wiring</option>
+                                <option value="fiber">Fiber Optic Installation</option>
+                                <option value="telecom">Telecommunication Wiring</option>
+                                <option value="network">Computer Network Setup</option>
+                                <option value="satellite">Satellite Dish Installation</option>
+                                <option value="lighting">Lighting Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-blue-200 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-blue-800 border border-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-6">
+                        <span class="text-blue-400">Smart</span>Station<span class="text-sm text-gray-400 ml-1">FRZ</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Your trusted partner for all electrical and telecommunications installation needs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition duration-300">About Us</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-blue-400 transition duration-300">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Electrical Wiring</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Fiber Optic Installation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Telecommunication Wiring</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Computer Network Setup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Satellite Dish Installation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Lighting Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Smart Station FRZ Building, Business Bay, Dubai, UAE</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">+971505357740</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">info@smartstationfrz.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Smart Station FRZ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'flex';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // View More Projects Button
+        const viewMoreBtn = document.getElementById('view-more-btn');
+        
+        viewMoreBtn.addEventListener('click', () => {
+            alert('More projects will be loaded here. This is a demo functionality.');
+        });
+        
+        // Contact Form Submission (Demo)
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (name && email && message) {
+                // In a real application, you would send this data to a server
+                alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`);
+                contactForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94989c1c566b0692',t:'MTc0ODg4NDcwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
